@@ -1,17 +1,84 @@
-$bgColor: #24292e;
-$text: #fff;
+@font-face {
+  font-family: 'TT Lakes Regular';
+  src: url('../fonts/TTLakes-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  }
 
 @font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+  font-family: 'TT Lakes Medium';
+  src: url('../fonts/TTLakes-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  }
+
+@font-face {
+  font-family: 'TT Lakes Bold';
+  src: url('../fonts/TTLakes-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  }
+
+* {
+  box-sizing: border-box;
 }
 
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
+.page {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100vh;
+  .page__menu {
+    width: 100%;
+    max-width: 305px;
+  }
+  .page__main {
+    background-color: #F8F8F8;
+    width: 100%;
+    max-width: 80rem;
+  }
+}
+
+.page__menu {
+  padding: 30px 29px 0 22px;
+  .menu__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .menu__logo {
+      width: 96.55px;
+      height: 50.81px;
+    }
+    .menu__search {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .menu__navigation {
+    margin-top: 118px;
+    .navigation__link {
+      color: #1B1C21;
+      text-decoration: none;
+      line-height: 24px;
+      font-family: 'TT Lakes Medium';
+      letter-spacing: -0.2px;
+    }
+    .navigation__link--active {
+      color: #7E7E82;
+      position: relative;
+      ::before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 4px;
+        height: 29px;
+        background-color: #41F6D7;
+        margin-left: -22px;
+        bottom: -2.5px;
+        border-radius: 3px;
+        
+      }
+    }
+
+  }
 }
