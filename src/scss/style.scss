@@ -19,12 +19,35 @@
   font-style: normal;
   }
 
-* {
-  box-sizing: border-box;
-}
+  
+  body {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: 'TT Lakes Medium';
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #1B1C21;
+  }
+  
+  .btn {
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0;
+  }
 
-.page {
-  display: flex;
+  .page {
+    display: flex;
   max-width: 1440px;
   margin: 0 auto;
   height: 100vh;
@@ -49,25 +72,21 @@
       width: 96.55px;
       height: 50.81px;
     }
-    .menu__search {
+    .btn-search {
       width: 40px;
       height: 40px;
+      background: url(../img/btn__search.png) center no-repeat;
     }
   }
   .menu__navigation {
-    margin-top: 118px;
-    .navigation__link {
-      color: #1B1C21;
-      text-decoration: none;
-      line-height: 24px;
-      font-family: 'TT Lakes Medium';
-      letter-spacing: -0.2px;
-    }
+    margin: 37.19px 0 241px 0;
     .navigation__link--active {
       color: #7E7E82;
+      cursor: default;
       position: relative;
       ::before {
         position: absolute;
+        cursor: default;
         content: '';
         display: block;
         width: 4px;
@@ -76,9 +95,47 @@
         margin-left: -22px;
         bottom: -2.5px;
         border-radius: 3px;
-        
       }
     }
-
+  }
+  .menu__contacts {
+    .contacts__box {
+      display: flex;
+      margin-bottom: 16px;
+      .btn {
+        width: 40px;
+        height: 42px;
+      }:not(:last-child) {
+        margin-right: 16px;
+      }
+      .btn-tel {
+        background: url(../img/btn-tel.png) center no-repeat;
+      }
+      .btn-chat {
+        background: url(../img/btn-chat.png) center no-repeat;
+      }
+      .btn-profile {
+        background: url(../img/btn-profile.png) center no-repeat;
+      }
+    }
+    .contacts__tel {
+      display: block;
+      margin: 12.4px 0 40.82px 0;
+      line-height: 32px;
+      letter-spacing: -0.6px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+  .menu__languages{
+    span{
+      cursor: pointer;
+    }:not(:last-child) {
+      margin-right: 7px;
+    }
+    .languages--active {
+      color: #7E7E82;
+      cursor: default;
+    }
   }
 }
