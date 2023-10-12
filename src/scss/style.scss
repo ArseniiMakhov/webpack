@@ -1,9 +1,4 @@
-@font-face {
-  font-family: 'TT Lakes Regular';
-  src: url('../fonts/TTLakes-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  }
+@import url(../scss/page__menu.scss);
 
 @font-face {
   font-family: 'TT Lakes Medium';
@@ -62,80 +57,30 @@
   }
 }
 
-.page__menu {
-  padding: 30px 29px 0 22px;
-  .menu__header {
+
+.page__main {
+  position: relative;
+  .main__header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .menu__logo {
-      width: 96.55px;
-      height: 50.81px;
-    }
-    .btn-search {
-      width: 40px;
-      height: 40px;
-      background: url(../img/btn__search.png) center no-repeat;
-    }
-  }
-  .menu__navigation {
-    margin: 37.19px 0 241px 0;
-    .navigation__link--active {
-      color: #7E7E82;
-      cursor: default;
-      position: relative;
-      ::before {
-        position: absolute;
-        cursor: default;
-        content: '';
-        display: block;
-        width: 4px;
-        height: 29px;
-        background-color: #41F6D7;
-        margin-left: -22px;
-        bottom: -2.5px;
-        border-radius: 3px;
-      }
-    }
-  }
-  .menu__contacts {
-    .contacts__box {
+    position: absolute;
+    right: 30px;
+    top: 42px;
+    .header__link{
       display: flex;
-      margin-bottom: 16px;
-      .btn {
-        width: 40px;
-        height: 42px;
-      }:not(:last-child) {
-        margin-right: 16px;
-      }
-      .btn-tel {
-        background: url(../img/btn-tel.png) center no-repeat;
-      }
-      .btn-chat {
-        background: url(../img/btn-chat.png) center no-repeat;
-      }
-      .btn-profile {
-        background: url(../img/btn-profile.png) center no-repeat;
-      }
+      align-items: center;
+      height: 40px;
+    }:not(:last-child) {
+      margin-right: 32px;
     }
-    .contacts__tel {
-      display: block;
-      margin: 12.4px 0 40.82px 0;
-      line-height: 32px;
-      letter-spacing: -0.6px;
-      font-size: 24px;
-      font-weight: 700;
+    .link__text {
+      margin: 0;
+      padding-right: 8px;
     }
   }
-  .menu__languages{
-    span{
-      cursor: pointer;
-    }:not(:last-child) {
-      margin-right: 7px;
-    }
-    .languages--active {
-      color: #7E7E82;
-      cursor: default;
-    }
+  .main__main {
+
+  }
+  .main__footer {
+
   }
 }
