@@ -20,7 +20,7 @@
         color: #7E7E82;
         cursor: default;
         position: relative;
-        ::before {
+      &:before {
           position: absolute;
           cursor: default;
           content: '';

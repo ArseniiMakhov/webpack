@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 @import url(../scss/page__menu.scss);
 
 @font-face {
@@ -23,10 +27,6 @@
     font-family: 'TT Lakes Medium';
     letter-spacing: -0.2px;
     color: #1B1C21;
-  }
-  
-  * {
-    box-sizing: border-box;
   }
   
   a {
@@ -78,9 +78,38 @@
     }
   }
   .main__main {
-
+    .main__title {
+      margin: 42px 0 17px 35px;
+      font-size: 28px;
+      line-height: 40px;
+      letter-spacing: -0.6px;
+      position: relative;
+    &:before {
+      position: absolute;
+      content: '';
+          display: block;
+          width: 3px;
+          height: 40px;
+          background-color: #41F6D7;
+          border-radius: 3px;
+          margin-left: -33px;
+    }
   }
+    .main__navigation {
+      margin: 0 34px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .navigation__link {
+      padding: 5px 20px;
+      margin-bottom: 14.63px;
+      color: #7E7E82;
+    }
+    .navigation__link--active {
+      border: 2px solid #B8FFEC;
+    }
   .main__footer {
 
+  }
   }
 }
