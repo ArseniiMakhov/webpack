@@ -63,15 +63,13 @@
         font-weight: 700;
       }
     }
-    .menu__languages{
-      span{
-        cursor: pointer;
-      }:not(:last-child) {
+    .menu__languages {
+      >a {
         margin-right: 7px;
       }
       .languages--active {
-        color: #7E7E82;
+        color: #7e7e82;
         cursor: default;
       }
     }
-  }
+}
