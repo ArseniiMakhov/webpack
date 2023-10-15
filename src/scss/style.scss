@@ -243,13 +243,14 @@
     }
   }
   .prices {
-    padding-bottom: 0;
+    padding-bottom: 50px;
     .prices__container {
       padding: 32px;
       .prices__table {
         width: 100%;
         font-size: 14px;
         line-height: 16px;
+        letter-spacing: 0.2px;
         border-collapse: collapse;
         thead {
           color: #7e7e82;
@@ -275,7 +276,6 @@
           font-weight: normal;
         }
         .btn__box {
-          
           .table__btn {
             border-radius: 16px;
             background: #FF3E79;
@@ -296,5 +296,48 @@
         }
       }
     }
+  }
+  .prices__addition {
+    width: 420px;
+    margin: 0 0 16px 32px;
+    font-family: "TT Lakes Regular";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+  .prices__offer {
+    padding-left:  32px;
+    display: inline;
+    // display: flex;
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: url(../img/prices__offer.svg) center no-repeat;
+    }
+  }
+}
+
+.main__footer {
+  border-top: 1px solid #D9FFF5;
+  height: 85px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  color: #7E7E82;
+  font-size: 14px;
+  line-height: 16px;
+  background-color: #f8f8f8;
+  > div {
+    width: 30%;
+  }
+  .footer__politics {
+    text-align: center;
+  }
+  .footer__information {
+    text-align: right;
   }
 }
