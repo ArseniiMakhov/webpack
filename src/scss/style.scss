@@ -18,6 +18,13 @@
   font-style: normal;
   }
 
+  @font-face {
+  font-family: 'TT Lakes Regular';
+  src: url('../fonts/TTLakes-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  }
+
   
   body {
     font-size: 16px;
@@ -79,6 +86,7 @@
   }
   .main__main {
     .main__title {
+      font-family: "TT Lakes Bold";
       margin: 42px 0 17px 35px;
       font-size: 28px;
       line-height: 40px;
@@ -87,12 +95,12 @@
     &:before {
       position: absolute;
       content: '';
-          display: block;
-          width: 3px;
-          height: 40px;
-          background-color: #41F6D7;
-          border-radius: 3px;
-          margin-left: -33px;
+      display: block;
+      width: 3px;
+      height: 40px;
+      background-color: #41F6D7;
+      border-radius: 3px;
+      margin-left: -33px;
     }
   }
     .main__navigation {
@@ -108,8 +116,46 @@
     .navigation__link--active {
       border: 2px solid #B8FFEC;
     }
-  .main__footer {
-
-  }
+    .history {
+      display: flex;
+      padding: 0 28.65px 13.13px 34px;
+      .history__text {
+        font-family: "TT Lakes Regular";
+        line-height: 20px;
+        margin-right: 36px;
+        font-size: 14px;
+        font-weight: 400;
+        .history__subtext[open] {
+          .subtext__title::before {
+            transform: rotate(180deg);
+          }
+        }
+        .subtext__title {
+          display: block;
+          cursor: pointer;
+          width: 30%;
+          font-family: "TT Lakes Medium";
+          font-size: 16px;
+          padding-left: 32px;
+          line-height: 24px;
+          
+          &::marker {
+            display: none;
+          }
+          &::before {
+            position: absolute;
+            margin-left: -32px;
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: url(../img/subtext__title-marker.svg) center no-repeat;
+          }
+        }
+      }
+      .history__img {
+        border-radius: 8px;
+      }
+    }
   }
 }
