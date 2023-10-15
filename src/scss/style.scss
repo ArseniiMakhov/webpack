@@ -50,10 +50,11 @@
 
   .section {
     padding-bottom: 50px;
+    width: 100%;
     background-color: #F8F8F8;
   }
 
-  .section__subtitle {
+  .section__title {
     padding: 16px 32px;
     margin: 0;
     color: #7E7E82;
@@ -61,7 +62,7 @@
     font-weight: 400;
     font-size: 16px;
     text-transform: uppercase;
-    background: linear-gradient(270deg, #F8F8F8 0%, #FFF 98.61%);
+    background: linear-gradient(270deg, #fff 0%, #f8f8f8 98.61%);
   }
 
   .section__box {
@@ -111,6 +112,7 @@
 
   .page {
     display: flex;
+    // width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     height: 100vh;
@@ -121,7 +123,6 @@
   .page__main {
     background-color: #F8F8F8;
     width: 100%;
-    max-width: 80rem;
   }
 }
 
@@ -197,6 +198,8 @@
       }
       .history__img {
         border-radius: 8px;
+        max-width: 532px;
+        max-height: 307px;
       }
     }
   }
@@ -235,6 +238,61 @@
         padding-left: 64px;
         &:before {
           margin-left: -32px;
+        }
+      }
+    }
+  }
+  .prices {
+    padding-bottom: 0;
+    .prices__container {
+      padding: 32px;
+      .prices__table {
+        width: 100%;
+        font-size: 14px;
+        line-height: 16px;
+        border-collapse: collapse;
+        thead {
+          color: #7e7e82;
+          text-align: left;
+        }
+        tbody {
+          background: #FFF;
+          border-radius: 6px;
+          
+        }
+        tr:not(:first-child)::after {
+          content: " ";
+          display: block;
+          height: 1px;
+          position: absolute;
+          left: 55px;
+          right: 55px;
+          background: #EAEAEA;
+          
+        }
+        td, th {
+          padding: 23px;
+          font-weight: normal;
+        }
+        .btn__box {
+          
+          .table__btn {
+            border-radius: 16px;
+            background: #FF3E79;
+            padding: 4px 8px 4px 12px;
+            font-family: "TT Lakes Bold";
+            font-size: 12px;
+            font-style: normal;
+            line-height: 24px;
+            text-transform: uppercase;
+            letter-spacing: -0.15px;
+            color: #FFF;
+            display: flex;
+            margin: 0 0 0 auto;
+            img {
+              margin-left: 8px;
+            }
+          }
         }
       }
     }
