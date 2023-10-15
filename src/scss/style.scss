@@ -48,6 +48,43 @@
     padding: 0;
   }
 
+  .section {
+    padding-bottom: 50px;
+    background-color: #F8F8F8;
+  }
+
+  .section__subtitle {
+    padding: 16px 32px;
+    margin: 0;
+    color: #7E7E82;
+    font-family: "TT Lakes Regular";
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: linear-gradient(270deg, #F8F8F8 0%, #FFF 98.61%);
+  }
+
+  .section__box {
+    padding: 24px 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 32px;
+    .navigation__item {
+      width: 240px;
+      padding: 16px;
+      background: #fff;
+      border: 1px solid #EAEAEA;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      .item__btn {
+        background: url(../img/item__btn.svg) center no-repeat;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
   .details[open] {
     .summary::before {
       transform: rotate(180deg);
@@ -164,41 +201,37 @@
     }
   }
   .brands {
-    .section__subtitle {
-      padding: 16px 32px;
-      margin: 0;
-      color: #7E7E82;
-      font-family: "TT Lakes Regular";
-      font-weight: 400;
-      font-size: 16px;
-      text-transform: uppercase;
-      background: linear-gradient(270deg, #F8F8F8 0%, #FFF 98.61%);
-    }
     .brands__navigation {
-      padding: 24px 32px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
       row-gap: 16px;
-      column-gap: 32px;
       .navigation__item {
-        padding: 16px;
-        width: 240px;
         height: 72px;
-        background: #fff;
-        border: 1px solid #EAEAEA;
-        border-radius: 6px;
-        display: flex;
-        justify-content: space-between;
         align-items: center;
-        .item__btn {
-          background: url(../img/item__btn.svg) center no-repeat;
-          width: 40px;
-          height: 40px;
-        }
       }
     }
     .brands__subbrands {
       .subbrands__title {
+        padding-left: 64px;
+        &:before {
+          margin-left: -32px;
+        }
+      }
+    }
+  }
+  .gadgets {
+    .gadgets__navigation {
+      .navigation__item {
+        height: 160px;
+        .item__text {
+          margin: 0;
+          align-self: flex-start;
+        }
+        .item__btn {
+          align-self: flex-end;
+        }
+      }
+    }
+    .gadgets__subgadgets {
+      .subgadgets__title {
         padding-left: 64px;
         &:before {
           margin-left: -32px;
