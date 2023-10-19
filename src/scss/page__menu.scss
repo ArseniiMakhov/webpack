@@ -15,22 +15,27 @@
       }
     }
     .menu__navigation {
-      margin: 37.19px 0 241px 0;
+      margin: 37px 0 240px 0;
+      .navigation__link:not(:last-child) {
+        >p {
+          margin-bottom: 28px;
+        }
+      }
       .navigation__link--active {
         color: #7E7E82;
         cursor: default;
         position: relative;
-      &:before {
-          position: absolute;
-          cursor: default;
-          content: '';
-          display: block;
-          width: 4px;
-          height: 29px;
-          background-color: #41F6D7;
-          margin-left: -22px;
-          bottom: -2.5px;
-          border-radius: 3px;
+        &:before {
+        position: absolute;
+        cursor: default;
+        content: '';
+        display: block;
+        width: 4px;
+        height: 29px;
+        background-color: #41F6D7;
+        margin-left: -22px;
+        bottom: -2.5px;
+        border-radius: 3px;
         }
       }
     }
@@ -56,7 +61,7 @@
       }
       .contacts__tel {
         display: block;
-        margin: 12.4px 0 40.82px 0;
+        margin: 12px 0 40px 0;
         line-height: 32px;
         letter-spacing: -0.6px;
         font-size: 24px;

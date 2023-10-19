@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  // outline: 1px solid #000;
 }
 
 @font-face {
@@ -19,7 +20,7 @@
   font-style: normal;
   }
 
-  @font-face {
+@font-face {
   font-family: 'TT Lakes Regular';
   src: url('../fonts/TTLakes-Regular.ttf') format('truetype');
   font-weight: 400;
@@ -73,7 +74,6 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 32px;
     .navigation__item {
-      width: 240px;
       padding: 16px;
       background: #fff;
       border: 1px solid #EAEAEA;
@@ -132,17 +132,15 @@
 
   .page {
     display: flex;
-    // width: 100%;
+    width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    height: 100vh;
   .page__menu {
-    width: 100%;
-    max-width: 305px;
+    width: 305px;
   }
   .page__main {
     background-color: #F8F8F8;
-    width: 100%;
+    width: calc(100% - 305px);
   }
 }
 
@@ -157,7 +155,6 @@
     z-index: 1;
     .header__link{
       display: flex;
-
       align-items: center;
       height: 40px;
     }:not(:last-child) {
@@ -188,13 +185,14 @@
     }
   }
     .main__navigation {
-      margin: 0 34px;
+      padding: 0 34px;
       display: flex;
       flex-wrap: wrap;
     }
     .navigation__link {
       padding: 5px 20px;
       margin-bottom: 14.63px;
+      margin-right: 10px;
       color: #7E7E82;
     }
     .navigation__link--active {
@@ -209,9 +207,16 @@
         margin-right: 36px;
         font-size: 14px;
         font-weight: 400;
+        > p {
+          margin-bottom: 14px;
+        } 
         .history__subtext {
+          > p {
+            margin-bottom: 14px;
+          }
           .subtext__title {
             padding-left: 32px;
+            margin-bottom: 14px;
             &::before {
               margin-left: -32px;
             }
@@ -220,6 +225,7 @@
       }
       .history__img {
         border-radius: 8px;
+        width: 50%;
         max-width: 532px;
         max-height: 307px;
       }
@@ -246,6 +252,7 @@
     .gadgets__navigation {
       .navigation__item {
         height: 160px;
+        flex-direction: column;
         .item__text {
           margin: 0;
           align-self: flex-start;
@@ -428,7 +435,7 @@
 }
 
 .modal__call--active {
-  // top: 0 !important;
+  top: 0 !important;
 }
 
 .modal__chat--active {
