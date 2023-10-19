@@ -11,6 +11,29 @@
     <title>Site</title>
   </head>
   <body>
+    <aside class="modal modal--active">
+      <form class="modal__form modal__call modal__call--active">
+        <button class="btn btn--close"></button>
+        <h2 class="modal__title">Заказать звонок</h2>
+        <input type="tel" name="phone" class="modal__input" placeholder="Телефон">
+        <p class="modal__disclaimer">Нажимая “отправить”, вы даете согласие на <a href="#" class="disclamer__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="disclamer__link">политикой конфиденциальности</a></p>
+        <button class="btn table__btn">Отправить
+          <img src="./img/table__btn.svg" alt="">
+        </button>
+      </form>
+      <form class="modal__form modal__chat modal__chat--active">
+        <button class="btn btn--close"></button>
+        <h2 class="modal__title">Обратная связь</h2>
+        <input type="text" name="name" class="modal__input" placeholder="Имя">
+        <input type="tel" name="phone" class="modal__input" placeholder="Телефон">
+        <input type="email" name="email" class="modal__input" placeholder="Электронная почта">
+        <textarea class="modal__input modal__input--area" placeholder="Сообщение"></textarea>
+        <p class="modal__disclaimer">Нажимая “отправить”, вы даете согласие на <a href="#" class="disclamer__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="disclamer__link">политикой конфиденциальности</a></p>
+        <button class="btn table__btn">Отправить
+          <img src="./img/table__btn.svg" alt="">
+        </button>
+      </form>
+    </aside>
     <div class="page">
       <aside class="page__menu">
         <div class="menu__header">
