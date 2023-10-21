@@ -23,18 +23,111 @@ body {
   color: #1B1C21;
   }
   
-  
-
 .page {
   display: flex;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   .page__menu {
-    width: 305px;
+    .menu__content {
+      width: 320px;
+    }
   }
   .page__main {
     background-color: #F8F8F8;
-    width: calc(100% - 305px);
+    width: calc(100% - 320px);
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  .page {
+    .page__menu {
+      display: flex;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: -100%;
+      z-index: 2;
+      background-color: #fff;
+      .menu__content {
+        box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20);
+        z-index: 3;
+        .menu__header {
+          .btn--close {
+            display: block;
+          }
+        }
+      }
+      .menu__background {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9605);
+      }
+    }
+    .page__menu--active {
+      left: 0 !important;
+    }
+  
+    .page__main {
+      width: 100%;
+      .main__header {
+        background: #fff;
+        position: relative;
+        justify-content: flex-end;
+        align-items: center;
+        top: 0;
+        left: 0;
+        height: 88px;
+        padding: 24px;
+        .contacts__box {
+          display: flex;
+          align-items: center;
+          margin: 0;
+          .btn {
+            margin-right: 16px;
+            &:last-child {
+              margin-right: 20px;
+            }
+          }
+          &::after {
+            display: block;
+            content: "";
+            width: 2px;
+            height: 32px;
+            border-radius: 1px;
+            background: #EAEAEA;
+            margin-right: 20px;
+          }
+        }
+        .btn {
+          &:not(:last-child) {
+            margin-right: 16px;
+          }
+          .btn__text {
+            display: none;
+          }
+        }
+        .header__logo {
+          text-align: left;
+          margin: 0 auto 0 26px;
+        }
+        .btn--burger {
+          position: relative;
+          width: 40px;
+          height: 40px;
+          background: url(../img/btn--burger.svg) center no-repeat;
+          &::after {
+            display: block;
+            content: "";
+            width: 2px;
+            height: 32px;
+            border-radius: 1px;
+            background: #EAEAEA;
+            position: absolute;
+            top: 4px;
+            left: 60px;
+          }
+        }
+      }
+    }
   }
 }

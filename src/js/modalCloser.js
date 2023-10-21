@@ -10,7 +10,7 @@ function modalCloser() {
     modalWindow.classList.remove('modal--active');
     
     setTimeout(function() {
-        modalCall.style.top = '0';
-        modalChat.style.top = '0';
+        modalCall.style.right = '0';
+        modalChat.style.right = '0';
     }, 100);
 }

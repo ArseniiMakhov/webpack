@@ -3,8 +3,8 @@
     width: 100%;
     position: fixed;
     z-index: 2;
-    top: -100vh;
-    transition: all .3s linear;
+    right: -100%;
+    transition: all .2s linear;
     .modal__background {
         position: relative;
         max-width: calc(100% - 440px);
@@ -13,9 +13,6 @@
         background-color: rgba(255, 255, 255, 0.9605);
         .btn--close {
             position: absolute;
-            width: 40px;
-            height: 40px;
-            background: url(../img/btn--close.svg) center no-repeat;
             top: 32px;
             right: 33px;
           }
@@ -80,5 +77,5 @@
   }
   
   .modal--active {
-    top: 0 !important;
+    right: 0 !important;
   }

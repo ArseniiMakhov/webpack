@@ -6,14 +6,17 @@
       right: 30px;
       top: 42px;
       z-index: 1;
-      .header__link{
+      .contacts__box {
+        display: none;
+      }
+      .btn{
         display: flex;
         align-items: center;
         height: 40px;
       }:not(:last-child) {
         margin-right: 32px;
       }
-      .link__text {
+      .btn__text {
         margin: 0;
         padding-right: 8px;
       }
@@ -87,9 +90,9 @@
     .brands {
       .brands__navigation {
         row-gap: 16px;
+        grid-template-rows: repeat(2, 1fr);
         .navigation__item {
           height: 72px;
-          max-width: 240px;
           align-items: center;
         }
       }
@@ -104,6 +107,7 @@
     }
     .gadgets {
       .gadgets__navigation {
+        grid-template-rows: repeat(1, 1fr);
         .navigation__item {
           height: 160px;
           flex-direction: column;

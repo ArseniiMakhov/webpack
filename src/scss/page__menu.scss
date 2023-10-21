@@ -1,80 +1,66 @@
 .page__menu {
-    padding: 30px 29px 0 22px;
-    .menu__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .menu__logo {
-        width: 96.55px;
-        height: 50.81px;
-      }
-      .btn-search {
-        width: 40px;
-        height: 40px;
-        background: url(../img/btn__search.png) center no-repeat;
-      }
-    }
-    .menu__navigation {
-      margin: 37px 0 240px 0;
-      .navigation__link:not(:last-child) {
-        >p {
-          margin-bottom: 28px;
-        }
-      }
-      .navigation__link--active {
-        color: #7E7E82;
-        cursor: default;
-        position: relative;
-        &:before {
-        position: absolute;
-        cursor: default;
-        content: '';
-        display: block;
-        width: 4px;
-        height: 29px;
-        background-color: #41F6D7;
-        margin-left: -22px;
-        bottom: -2.5px;
-        border-radius: 3px;
-        }
-      }
-    }
-    .menu__contacts {
-      .contacts__box {
+  .menu__content {
+      padding: 30px 29px 0 22px;
+      .menu__header {
         display: flex;
-        margin-bottom: 16px;
-        .btn {
+        justify-content: space-between;
+        align-items: center;
+        .btn--close {
+          display: none;
+        }
+        .menu__logo {
+          width: 98px;
+          height: 52px;
+        }
+        .btn-search {
           width: 40px;
-          height: 42px;
-        }:not(:last-child) {
-          margin-right: 16px;
-        }
-        .btn-tel {
-          background: url(../img/btn-tel.png) center no-repeat;
-        }
-        .btn-chat {
-          background: url(../img/btn-chat.png) center no-repeat;
-        }
-        .btn-profile {
-          background: url(../img/btn-profile.png) center no-repeat;
+          height: 40px;
+          background: url(../img/btn__search.png) center no-repeat;
         }
       }
-      .contacts__tel {
-        display: block;
-        margin: 12px 0 40px 0;
-        line-height: 32px;
-        letter-spacing: -0.6px;
-        font-size: 24px;
-        font-weight: 700;
+      .menu__navigation {
+        margin: 37px 0 240px 0;
+        .navigation__link:not(:last-child) {
+          >p {
+            margin-bottom: 28px;
+          }
+        }
+        .navigation__link--active {
+          color: #7E7E82;
+          cursor: default;
+          position: relative;
+          &:before {
+          position: absolute;
+          cursor: default;
+          content: '';
+          display: block;
+          width: 4px;
+          height: 29px;
+          background-color: #41F6D7;
+          margin-left: -22px;
+          bottom: -2.5px;
+          border-radius: 3px;
+          }
+        }
       }
-    }
-    .menu__languages {
-      >a {
-        margin-right: 7px;
+      .menu__contacts {
+        .contacts__tel {
+          display: block;
+          margin: 12px 0 40px 0;
+          line-height: 32px;
+          letter-spacing: -0.6px;
+          font-size: 24px;
+          font-weight: 700;
+        }
       }
-      .languages--active {
-        color: #7e7e82;
-        cursor: default;
+      .menu__languages {
+        >a {
+          margin-right: 7px;
+        }
+        .languages--active {
+          color: #7e7e82;
+          cursor: default;
+        }
       }
-    }
+  }
 }

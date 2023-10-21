@@ -5,6 +5,6 @@ const modalCall = document.querySelector(".modal__call");
 export default btnChat.addEventListener('click', openerChat);
 
 function openerChat() {
-    modalCall.style.top = '-100vh';
+    modalCall.style.right = '-100%';
     modalWindow.classList.add("modal--active");
 }
