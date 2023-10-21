@@ -1,0 +1,190 @@
+.page__main {
+    position: relative;
+    .main__header {
+      display: flex;
+      position: absolute;
+      right: 30px;
+      top: 42px;
+      z-index: 1;
+      .header__link{
+        display: flex;
+        align-items: center;
+        height: 40px;
+      }:not(:last-child) {
+        margin-right: 32px;
+      }
+      .link__text {
+        margin: 0;
+        padding-right: 8px;
+      }
+    }
+    .main__main {
+      .main__title {
+        font-family: "TT Lakes Bold";
+        margin: 42px 0 17px 35px;
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: -0.6px;
+        position: relative;
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 3px;
+        height: 40px;
+        background-color: #41F6D7;
+        border-radius: 3px;
+        margin-left: -33px;
+      }
+    }
+      .main__navigation {
+        padding: 0 34px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .navigation__link {
+        padding: 5px 20px;
+        margin-bottom: 14.63px;
+        margin-right: 10px;
+        color: #7E7E82;
+      }
+      .navigation__link--active {
+        border: 2px solid #B8FFEC;
+      }
+      .history {
+        display: flex;
+        padding: 0 28.65px 40px 34px;
+        .history__text {
+          font-family: "TT Lakes Regular";
+          line-height: 20px;
+          margin-right: 36px;
+          font-size: 14px;
+          font-weight: 400;
+          > p {
+            margin-bottom: 14px;
+          } 
+          .history__subtext {
+            > p {
+              margin-bottom: 14px;
+            }
+            .subtext__title {
+              padding-left: 32px;
+              margin-bottom: 14px;
+              &::before {
+                margin-left: -32px;
+              }
+            }
+          }
+        }
+        .history__img {
+          border-radius: 8px;
+          width: 50%;
+          max-width: 532px;
+          max-height: 307px;
+        }
+      }
+    }
+    .brands {
+      .brands__navigation {
+        row-gap: 16px;
+        .navigation__item {
+          height: 72px;
+          max-width: 240px;
+          align-items: center;
+        }
+      }
+      .brands__subbrands {
+        .subbrands__title {
+          padding-left: 64px;
+          &:before {
+            margin-left: -32px;
+          }
+        }
+      }
+    }
+    .gadgets {
+      .gadgets__navigation {
+        .navigation__item {
+          height: 160px;
+          flex-direction: column;
+          .item__text {
+            margin: 0;
+            align-self: flex-start;
+          }
+          .item__btn {
+            align-self: flex-end;
+          }
+        }
+      }
+      .gadgets__subgadgets {
+        .subgadgets__title {
+          padding-left: 64px;
+          &:before {
+            margin-left: -32px;
+          }
+        }
+      }
+    }
+    .prices {
+      padding-bottom: 50px;
+      .prices__container {
+        padding: 32px;
+        .prices__table {
+          width: 100%;
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 0.2px;
+          border-collapse: collapse;
+          > thead {
+            color: #7e7e82;
+            text-align: left;
+            >tr {
+                >th {
+                    padding: 23px;
+                    font-weight: normal;
+                }
+            }
+          }
+          > tbody {
+            background: #FFF;
+            border-radius: 6px;
+            > tr {
+              &:not(:first-child)::after {
+                content: " ";
+                display: block;
+                height: 1px;
+                position: absolute;
+                left: 55px;
+                right: 55px;
+                background: #EAEAEA;
+                }
+              > td {
+                padding: 23px;
+                }
+            }
+          }
+        }
+      }
+    }
+    .prices__addition {
+      width: 420px;
+      margin: 0 0 16px 32px;
+      font-family: "TT Lakes Regular";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+    }
+    .prices__offer {
+      padding-left:  32px;
+      display: inline;
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: url(../img/prices__offer.svg) center no-repeat;
+      }
+    }
+  }
