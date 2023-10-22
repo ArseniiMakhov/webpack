@@ -1,6 +1,8 @@
 .page__menu {
   .menu__content {
-      padding: 30px 29px 0 22px;
+      height: 100vh;
+      padding: 30px 29px 30px 22px;
+      position: relative;
       .menu__header {
         display: flex;
         justify-content: space-between;
@@ -19,7 +21,7 @@
         }
       }
       .menu__navigation {
-        margin: 37px 0 240px 0;
+        margin-top: 37px;
         .navigation__link:not(:last-child) {
           >p {
             margin-bottom: 28px;
@@ -44,6 +46,8 @@
         }
       }
       .menu__contacts {
+        position: absolute;
+        bottom: 70px;
         .contacts__tel {
           display: block;
           margin: 12px 0 40px 0;
@@ -54,6 +58,8 @@
         }
       }
       .menu__languages {
+        position: absolute;
+        bottom: 30px;
         >a {
           margin-right: 7px;
         }

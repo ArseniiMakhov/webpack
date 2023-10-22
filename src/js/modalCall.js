@@ -1,8 +1,10 @@
-const btnCall = document.querySelector(".btn-tel");
+const btnCall = document.querySelectorAll(".btn-tel");
 const modalWindow = document.querySelector(".modal");
 const modalChat = document.querySelector(".modal__chat");
 
-export default btnCall.addEventListener('click', openerCall);
+export default btnCall.forEach(function (btn) {
+    btn.addEventListener('click', openerCall);
+})
 
 function openerCall() {
     modalChat.style.right = '-100%';

@@ -42,13 +42,14 @@ body {
 @media screen and (max-width: 1365px) {
   .page {
     .page__menu {
-      display: flex;
       width: 100%;
+      display: flex;
       position: fixed;
       top: 0;
       left: -100%;
       z-index: 2;
       background-color: #fff;
+      transition: all .2s linear;
       .menu__content {
         box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20);
         z-index: 3;
@@ -60,13 +61,14 @@ body {
       }
       .menu__background {
         width: 100%;
+        max-width: calc(100% - 320px);
+        height: 100vh;
         background-color: rgba(255, 255, 255, 0.9605);
       }
     }
     .page__menu--active {
       left: 0 !important;
     }
-  
     .page__main {
       width: 100%;
       .main__header {
@@ -107,15 +109,17 @@ body {
           }
         }
         .header__logo {
-          text-align: left;
+          display: block;
           margin: 0 auto 0 26px;
         }
         .btn--burger {
+          display: block;
           position: relative;
           width: 40px;
           height: 40px;
           background: url(../img/btn--burger.svg) center no-repeat;
           &::after {
+            cursor: default;
             display: block;
             content: "";
             width: 2px;
@@ -128,6 +132,150 @@ body {
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .section__box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .page__main {
+    .brands {
+      .brands__subbrands {
+        .subbrands__title {
+          margin-top: 8px;
+        }
+      }
+    }
+    .prices {
+      .prices__container {
+        .prices__table {
+          >thead {
+            > tr {
+              > th {
+                padding: 23px 16px;
+                &:first-child {
+                  padding: 23px 0 23px 16px;
+                }
+                &:not(:first-child) {
+                  padding: 23px 5px;
+                }
+                &:last-child {
+                  padding: 23px 16px 23px 0;
+                }
+              }
+            }
+          }
+          > tbody {
+            > tr {
+              &:not(:first-child)::after {
+                left: 48px;
+                right: 48px;
+              }
+              > td {
+                padding: 23px 16px;
+                &:first-child {
+                  padding: 23px 0 23px 16px;
+                }
+                &:not(:first-child) {
+                  padding: 23px 5px;
+                }
+                &:last-child {
+                  padding: 23px 16px 23px 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .main__footer {
+      height: 105px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .summary {
+    margin-top: 24px;
+  }
+
+  .section {
+    padding-bottom: 32px;
+  }
+
+  .section__title {
+    padding: 16px 24px;
+  }
+
+  .section__box {
+    padding: 24px 24px 0 24px;
+    column-gap: 24px;
+  }
+
+  .page__main {
+    .main__main {
+      position: relative;
+      .main__title {
+        margin: 24px 0 22px 24px;
+        &::before {
+          margin-left: -24px;
+          width: 4px;
+        }
+      }
+      .main__navigation {
+        padding: 10px 24px;
+        margin-bottom: 6px;
+        display: block;
+        white-space: nowrap;
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+          display: none;
+        };
+        &::after {
+          content: "";
+          display: block;
+          width: 24px;
+          height: 40px;
+          background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.00) 100%);
+          position: absolute;
+          right: 0;
+          top: 64px;
+        }
+        .navigation__link {
+          margin-right: 0;
+        }
+      }
+      .history {
+        padding: 24px;
+      }
+      .prices {
+        padding-bottom: 47px;
+        .prices__container {
+          padding: 24px;
+          .prices__table {
+            > tbody {
+              > tr {
+                &:not(:first-child)::after {
+                  left: 40px;
+                  right: 40px;
+                }
+              }
+            }
+          }
+        }
+        .prices__addition {
+           margin: 0 0 16px 24px;
+        }
+        .prices__offer {
+           padding-left: 24px;
+        }
+      }
+    }
+    .main__footer {
+      padding: 32px 24px;
     }
   }
 }

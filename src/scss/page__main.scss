@@ -20,6 +20,12 @@
         margin: 0;
         padding-right: 8px;
       }
+      .btn--burger {
+        display: none;
+      }
+      .header__logo {
+        display: none;
+      }
     }
     .main__main {
       .main__title {
@@ -136,9 +142,10 @@
         .prices__table {
           width: 100%;
           font-size: 14px;
-          line-height: 16px;
+          line-height: 18px;
           letter-spacing: 0.2px;
           border-collapse: collapse;
+          padding: 0 23px;
           > thead {
             color: #7e7e82;
             text-align: left;
@@ -169,26 +176,26 @@
           }
         }
       }
-    }
-    .prices__addition {
-      width: 420px;
-      margin: 0 0 16px 32px;
-      font-family: "TT Lakes Regular";
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 20px;
-      letter-spacing: 0.2px;
-    }
-    .prices__offer {
-      padding-left:  32px;
-      display: inline;
-      &::after {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        width: 24px;
-        height: 24px;
-        background: url(../img/prices__offer.svg) center no-repeat;
+      .prices__addition {
+        width: 420px;
+        margin: 0 0 16px 32px;
+        font-family: "TT Lakes Regular";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+      }
+      .prices__offer {
+        padding-left:  32px;
+        display: inline;
+        &::after {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          background: url(../img/prices__offer.svg) center no-repeat;
+        }
       }
     }
   }
