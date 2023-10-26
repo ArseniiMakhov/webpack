@@ -88,8 +88,8 @@
         .history__img {
           border-radius: 8px;
           width: 50%;
-          max-width: 532px;
-          max-height: 307px;
+          aspect-ratio: 16 / 9;
+          align-self:flex-start;
         }
       }
     }
@@ -97,7 +97,7 @@
       .brands__navigation {
         row-gap: 16px;
         grid-template-rows: repeat(2, 1fr);
-        .navigation__item {
+        .section__item {
           height: 72px;
           align-items: center;
         }
@@ -114,7 +114,7 @@
     .gadgets {
       .gadgets__navigation {
         grid-template-rows: repeat(1, 1fr);
-        .navigation__item {
+        .section__item {
           height: 160px;
           flex-direction: column;
           .item__text {
