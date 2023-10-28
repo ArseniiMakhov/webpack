@@ -139,6 +139,9 @@
       padding-bottom: 50px;
       .prices__container {
         padding: 32px;
+        .swiper {
+          display: table;
+        }
         .prices__table {
           width: 100%;
           font-size: 14px;
@@ -159,14 +162,16 @@
           > tbody {
             background: #FFF;
             border-radius: 6px;
+            display: table-row-group;
             > tr {
+              display: table-row;
               &:not(:first-child)::after {
                 content: " ";
                 display: block;
                 height: 1px;
                 position: absolute;
-                left: 55px;
-                right: 55px;
+                left: 23px;
+                right: 23px;
                 background: #EAEAEA;
                 }
               > td {

@@ -37,8 +37,9 @@ body {
     }
   }
   .page__main {
-    background-color: #F8F8F8;
     width: calc(100% - 320px);
+    background: #F8F8F8;
+    
   }
 }
 
@@ -51,7 +52,6 @@ body {
       top: 0;
       left: -100%;
       z-index: 2;
-      background-color: #fff;
       transition: all .2s linear;
       .menu__content {
         box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20);
@@ -174,8 +174,8 @@ body {
           > tbody {
             > tr {
               &:not(:first-child)::after {
-                left: 48px;
-                right: 48px;
+                left: 16px;
+                right: 16px;
               }
               > td {
                 padding: 23px 16px;
@@ -258,16 +258,6 @@ body {
         padding-bottom: 47px;
         .prices__container {
           padding: 24px;
-          .prices__table {
-            > tbody {
-              > tr {
-                &:not(:first-child)::after {
-                  left: 40px;
-                  right: 40px;
-                }
-              }
-            }
-          }
         }
         .prices__addition {
            margin: 0 0 16px 24px;
@@ -283,7 +273,14 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 722px) {
+  .swiper-slide {
+    width: 100% !important;
+    max-width: 240px !important;
+  }
+}
+
+@media screen and (max-width: 721px) {
   .details:not(.history__subtext) {
     display: none;
   }
@@ -304,11 +301,11 @@ body {
       content: "";
       display: block;
       width: 24px;
-      height: calc(100% - 108px);
+      height: calc(100%);
       background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0) 100%);
       position: absolute;
       right: 0;
-      bottom: 40px;
+      bottom: 0;
       z-index: 2;
     }
     .swiper-wrapper {
@@ -320,4 +317,77 @@ body {
       bottom: 18px;      
     }
   }
+
+  .page__main {
+    .main__main {
+      .prices {
+        .prices__container {
+          overflow: hidden;
+          padding: 0;
+          .swiper {
+            .swiper-wrapper {
+              padding: 24px 24px 52px 24px;
+              .swiper-slide {
+                background-color: #fff;
+                border-radius: 6px;
+                display: flex;
+                flex-direction: column;
+                padding: 16px;
+              }
+            }
+          }
+          .prices__table {
+            display: block;
+            padding: 0;
+            line-height: 16px;
+            > thead {
+              display: none;
+            }
+            > tbody {
+              border-radius: 0;
+              background-color: #f8f8f8;
+              display: flex;
+              > tr {
+                position: relative;
+                height: 200px;
+                display: flex;
+                &:not(:first-child)::after {
+                  display: none;
+                }
+                > td {
+                  padding: 0 !important;
+                  &:not(:last-child) {
+                    margin-bottom: 16px;
+                  }
+                  &:not(:last-child)::before {
+                    display: block;
+                    color: #7E7E82;
+                    margin-bottom: 4px;
+                  }
+                  &:first-child::before {
+                    content: "Ремонтные услуги";
+                  }
+                  &:nth-child(2):before {
+                    content: "Цена";
+                  }
+                  &:nth-child(3):before {
+                    content: "Срок";
+                  }
+                }
+                .btn__box {
+                  position: absolute;
+                  bottom: 16px;
+                  right: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 579px) {
+  
 }

@@ -5,10 +5,9 @@ import { Pagination } from 'swiper/modules'
 
 Swiper.use([Pagination]);
 
-export default new Swiper('.swiper', {
+export default new Swiper('.gadgets', {
     direction: 'horizontal',
     loop: false,
-    slidesPerView: 'auto',
     spaceBetween: 16,
     width: 240,
     modules: [Pagination],
@@ -17,11 +16,9 @@ export default new Swiper('.swiper', {
         type: 'bullets',
         clickable: true,
     },
-    scrollbar: {
-        enabled: false,
+    breakpoints: {
+        722: {
+            spaceBetween: null,
+        },
     },
 });
-
- 
-
-
