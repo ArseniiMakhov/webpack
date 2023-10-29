@@ -93,7 +93,9 @@ body {
               margin-right: 20px;
             }
           }
-          &::after {
+        }
+        .btn--app {
+          &::before {
             display: block;
             content: "";
             width: 2px;
@@ -113,7 +115,8 @@ body {
         }
         .header__logo {
           display: block;
-          margin: 0 auto 0 26px;
+          margin-right: auto;
+          padding-left: 30px;
         }
         .btn--burger {
           display: block;
@@ -214,7 +217,6 @@ body {
   }
 
   .section__box {
-    padding: 24px 24px 0 24px;
     column-gap: 24px;
   }
 
@@ -260,7 +262,7 @@ body {
           padding: 24px;
         }
         .prices__addition {
-           margin: 0 0 16px 24px;
+           padding: 0 24px 16px 24px;
         }
         .prices__offer {
            padding-left: 24px;
@@ -309,7 +311,7 @@ body {
       z-index: 2;
     }
     .swiper-wrapper {
-      padding-bottom: 52px;
+      padding: 24px 24px 52px 24px;
       display: flex;
     }
     .swiper-pagination {
@@ -326,7 +328,6 @@ body {
           padding: 0;
           .swiper {
             .swiper-wrapper {
-              padding: 24px 24px 52px 24px;
               .swiper-slide {
                 background-color: #fff;
                 border-radius: 6px;
@@ -389,5 +390,151 @@ body {
 }
 
 @media screen and (max-width: 579px) {
-  
+  .summary {
+    margin: 0;
+  }
+
+  .page__menu {
+    .menu__content {
+      padding: 24px;
+      .menu__navigation {
+        margin-top: 24px;
+        .navigation__link {
+          &:not(:last-child) {
+            > p {
+              margin-bottom: 24px;
+            }
+          }
+        }
+      }
+      .menu__contacts {
+        bottom: 64px;
+        .contacts__box {
+          margin-bottom: 10px;
+        }
+        .contacts__tel {
+          margin: 12px 0 8px 0;
+        }
+      }
+      .menu__languages {
+        bottom: 32px;
+      }
+    }
+  }
+
+  .page__main {
+    .main__main {
+      .history {
+        display: block;
+        padding: 24px 0;
+        .history__text {
+          padding: 0 24px;
+          margin-right: 0;
+        }
+        .history__img {
+          width: 100%;
+          border-radius: 0;
+        }
+      }
+    }
+    .main__footer {
+      display: block;
+      height: auto;
+      padding: 16px 4px;
+      text-align: center;
+      > div {
+        width: 100%;
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+      .footer__information {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .page {
+    .page__main {
+      .main__header {
+        .contacts__box {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .modal {
+    .modal__form {
+      .modal__title {
+        margin: 104px 0 24px 0;
+      }
+    }
+    .modal__background {
+      .btn--close {
+        right: -56px;
+        z-index: 6;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .swiper {
+    .swiper-wrapper {
+      padding: 16px 16px 52px 16px;
+    }
+  }
+
+  .page {
+    .page__menu {
+      .menu__content {
+        width: 100%;
+      }
+      .menu__background {
+        width: 0;
+      }
+    }
+    .page__main {
+      .main__header {
+        padding: 24px 16px;
+        .btn--burger {
+          margin: 0;
+          &::after {
+            display: none;
+          }
+        }
+        .header__logo {
+          padding-left: 0;
+        }
+      }
+      .main__main {
+        .main__title {
+          margin: 24px 0 24px 16px;
+          &::before {
+            margin-left: -16px;
+          }
+        }
+        .history {
+          .history__text {
+            padding: 0 16px;
+          }
+        }
+        .prices {
+          padding-bottom: 40px;
+          .prices__addition {
+            padding: 0 16px 16px 16px;
+          }
+          .prices__offer {
+            padding: 0 32px 0 16px;
+            display: block;
+            width: 100%;
+            max-width: 300px;
+          }
+        }
+      }
+    }
+  }
 }

@@ -9,6 +9,8 @@ a {
     border-radius: 50%;
     padding: 0;
     background-color: transparent;
+    height: 40px;
+    min-width: 40px;
   }
 
   .section {
@@ -48,8 +50,6 @@ a {
       justify-content: space-between;
       .item__btn {
         background: url(../img/item__btn.svg) center no-repeat;
-        width: 40px;
-        height: 40px;
       }
     }
   }
@@ -105,14 +105,13 @@ a {
     color: #FFF;
     display: flex;
     margin: 0 0 0 auto;
+    height: 32px;
     img {
       margin-left: 8px;
     }
   }
 
   .btn--close {
-    width: 40px;
-    height: 40px;
     background: url(../img/btn--close.svg) center no-repeat;
   }
 
@@ -120,10 +119,9 @@ a {
     display: flex;
     margin-bottom: 16px;
     .btn {
-      width: 40px;
-      height: 40px;
-    }:not(:last-child) {
+      &:not(:last-child) {
       margin-right: 16px;
+      }
     }
     .btn-tel {
       background: url(../img/btn-tel.png) center no-repeat;

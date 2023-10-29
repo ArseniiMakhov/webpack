@@ -1,5 +1,5 @@
 const modalWindow = document.querySelector(".modal");
-const btnClose = document.querySelector(".btn--close");
+const btnClose = document.querySelector(".btn--modal");
 const modalChat = document.querySelector(".modal__chat");
 const modalCall = document.querySelector(".modal__call");
 
