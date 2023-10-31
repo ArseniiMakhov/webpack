@@ -1,0 +1,67 @@
+@media screen and (max-width: 768px) {
+    .summary {
+      margin-top: 24px;
+    }
+    .section {
+      padding-bottom: 32px;
+      .section__title {
+        padding: 16px 24px;
+      }
+      .section__box {
+        column-gap: 24px;
+      }
+    }
+    .page__main {
+      .main__main {
+        position: relative;
+        .main__title {
+          margin: 24px 0 22px 24px;
+          &::before {
+            margin-left: -24px;
+            width: 4px;
+          }
+        }
+        .main__navigation {
+          padding: 10px 24px;
+          margin-bottom: 6px;
+          display: block;
+          white-space: nowrap;
+          overflow-x: scroll;
+          &::-webkit-scrollbar {
+            display: none;
+          };
+          &::after {
+            content: "";
+            display: block;
+            width: 24px;
+            height: 40px;
+            background: $navigation-shadow;
+            position: absolute;
+            right: 0;
+            top: 64px;
+          }
+          .navigation__link {
+            margin-right: 0;
+          }
+        }
+        .history {
+          padding: 24px;
+        }
+        .prices {
+          padding-bottom: 47px;
+          .prices__container {
+            padding: 24px;
+          }
+          .prices__addition {
+             padding: 0 24px 16px 24px;
+          }
+          .prices__offer {
+             padding-left: 24px;
+          }
+        }
+      }
+      .main__footer {
+        padding: 32px 24px;
+      }
+    }
+  }

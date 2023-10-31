@@ -1,0 +1,24 @@
+@media screen and (max-width: 540px) {
+    .page {
+      .page__main {
+        .main__header {
+          .contacts__box {
+            display: none;
+          }
+        }
+      }
+    }
+    .modal {
+      .modal__form {
+        .modal__title {
+          margin: 104px 0 24px 0;
+        }
+      }
+      .modal__background {
+        .btn--close {
+          right: -56px;
+          z-index: 6;
+        }
+      }
+    }
+  }

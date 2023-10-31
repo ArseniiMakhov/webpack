@@ -1,20 +1,20 @@
 .main__footer {
-    border-top: 1px solid #D9FFF5;
+    border-top: 1px solid $footer-line;
     height: 85px;
     padding: 32px;
     display: flex;
     justify-content: space-between;
-    color: #7E7E82;
+    color: $support-text-color;
     font-size: 14px;
     line-height: 16px;
-    background-color: #f8f8f8;
+    background-color: $gray-bg;
     > div {
       width: 30%;
-    }
+    };
     .footer__politics {
       text-align: center;
-    }
+    };
     .footer__information {
       text-align: right;
-    }
-  }
+    };
+  };

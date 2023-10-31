@@ -1,0 +1,98 @@
+@media screen and (max-width: 1365px) {
+    .page {
+      .page__menu {
+        width: 100%;
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 2;
+        transition: all .2s linear;
+        .menu__content {
+          box-shadow: 16px 0px 52px 0px $menu-shadow;
+          z-index: 3;
+          .menu__header {
+            .btn--close {
+              display: block;
+            }
+          }
+        }
+        .menu__background {
+          width: 100%;
+          max-width: calc(100% - 320px);
+          height: 100vh;
+          background-color: $modal-bg;
+        }
+      }
+      .page__menu--active {
+        left: 0 !important;
+      }
+      .page__main {
+        width: 100%;
+        .main__header {
+          background: $white-bg;
+          position: relative;
+          justify-content: flex-end;
+          align-items: center;
+          top: 0;
+          left: 0;
+          height: 88px;
+          padding: 24px;
+          .contacts__box {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            .btn {
+              margin-right: 16px;
+              &:last-child {
+                margin-right: 20px;
+              }
+            }
+          }
+          .btn--app {
+            &::before {
+              display: block;
+              content: "";
+              width: 2px;
+              height: 32px;
+              border-radius: 1px;
+              background: $table-lines;
+              margin-right: 20px;
+            }
+          }
+          .btn {
+            &:not(:last-child) {
+              margin-right: 16px;
+            }
+            .btn__text {
+              display: none;
+            }
+          }
+          .header__logo {
+            display: block;
+            margin-right: auto;
+            padding-left: 30px;
+          }
+          .btn--burger {
+            display: block;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            background: url(../img/btn--burger.svg) center no-repeat;
+            &::after {
+              cursor: default;
+              display: block;
+              content: "";
+              width: 2px;
+              height: 32px;
+              border-radius: 1px;
+              background: $table-lines;
+              position: absolute;
+              top: 4px;
+              left: 60px;
+            }
+          }
+        }
+      }
+    }
+  }

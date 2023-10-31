@@ -1,6 +1,6 @@
 .page__menu {
   .menu__content {
-      background-color: #fff;
+      background-color: $white-bg;
       height: 100vh;
       padding: 30px 29px 30px 22px;
       position: relative;
@@ -30,7 +30,6 @@
         }
         .navigation__link--active {
           color: #7E7E82;
-          cursor: default;
           position: relative;
           &:before {
           position: absolute;
@@ -39,7 +38,7 @@
           display: block;
           width: 4px;
           height: 29px;
-          background-color: #41F6D7;
+          background-color: $title-marker;
           margin-left: -22px;
           bottom: -2.5px;
           border-radius: 3px;
@@ -65,7 +64,7 @@
           margin-right: 7px;
         }
         .languages--active {
-          color: #7e7e82;
+          color: $support-text-color;
           cursor: default;
         }
       }

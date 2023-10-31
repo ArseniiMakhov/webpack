@@ -10,4 +10,3 @@ import './swiper-gadgets'
 import './swiper-table'
 import '../scss/style.scss'
 
-

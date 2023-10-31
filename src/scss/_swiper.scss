@@ -1,0 +1,23 @@
+.swiper {
+    padding-bottom: 24px;
+    .swiper-wrapper {
+      display: grid;
+      .swiper-slide {
+        transition-property: all;
+      }
+    }
+    .swiper-pagination {
+      display: none;
+    }
+  }
+
+  .swiper-horizontal {
+    .swiper-pagination-bullets {
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        margin: 0 5px;
+        background-color: $swiper-bullet;
+      }
+    }
+  }

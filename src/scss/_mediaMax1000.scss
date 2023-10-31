@@ -1,0 +1,61 @@
+@media screen and (max-width: 1000px) {
+    .section {
+      .section__box {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .page__main {
+      .brands {
+        .brands__subbrands {
+          .subbrands__title {
+            margin-top: 8px;
+          }
+        }
+      }
+      .prices {
+        .prices__container {
+          .prices__table {
+            >thead {
+              > tr {
+                > th {
+                  padding: 23px 16px;
+                  &:first-child {
+                    padding: 23px 0 23px 16px;
+                  }
+                  &:not(:first-child) {
+                    padding: 23px 5px;
+                  }
+                  &:last-child {
+                    padding: 23px 16px 23px 0;
+                  }
+                }
+              }
+            }
+            > tbody {
+              > tr {
+                &:not(:first-child)::after {
+                  left: 16px;
+                  right: 16px;
+                }
+                > td {
+                  padding: 23px 16px;
+                  &:first-child {
+                    padding: 23px 0 23px 16px;
+                  }
+                  &:not(:first-child) {
+                    padding: 23px 5px;
+                  }
+                  &:last-child {
+                    padding: 23px 16px 23px 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .main__footer {
+        height: 105px;
+      }
+    }
+  }

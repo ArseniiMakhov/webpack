@@ -1,0 +1,56 @@
+@media screen and (max-width: 360px) {
+    .swiper {
+      .swiper-wrapper {
+        padding: 16px 16px 52px 16px;
+      }
+    }
+    .page {
+      .page__menu {
+        .menu__content {
+          width: 100%;
+        }
+        .menu__background {
+          width: 0;
+        }
+      }
+      .page__main {
+        .main__header {
+          padding: 24px 16px;
+          .btn--burger {
+            margin: 0;
+            &::after {
+              display: none;
+            }
+          }
+          .header__logo {
+            padding-left: 0;
+          }
+        }
+        .main__main {
+          .main__title {
+            margin: 24px 0 24px 16px;
+            &::before {
+              margin-left: -16px;
+            }
+          }
+          .history {
+            .history__text {
+              padding: 0 16px;
+            }
+          }
+          .prices {
+            padding-bottom: 40px;
+            .prices__addition {
+              padding: 0 16px 16px 16px;
+            }
+            .prices__offer {
+              padding: 0 32px 0 16px;
+              display: block;
+              width: 100%;
+              max-width: 300px;
+            }
+          }
+        }
+      }
+    }
+  }

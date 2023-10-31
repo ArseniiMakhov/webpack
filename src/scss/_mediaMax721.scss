@@ -1,0 +1,103 @@
+@media screen and (max-width: 721px) {
+    .details:not(.history__subtext) {
+      display: none;
+    }
+    .section {
+      .section__box {
+        column-gap: 0;
+        overflow-y: visible;
+        .section__item {
+          margin-right: 0;
+        }
+      }
+    }
+    .swiper {
+      padding-bottom: 0;
+      &::after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: calc(100%);
+        background:$swiper-shadow;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+      }
+      .swiper-wrapper {
+        padding: 24px 24px 52px 24px;
+        display: flex;
+      }
+      .swiper-pagination {
+        display: block;
+        bottom: 18px;      
+      }
+    }
+    .page__main {
+      .main__main {
+        .prices {
+          .prices__container {
+            overflow: hidden;
+            padding: 0;
+            .swiper {
+              .swiper-wrapper {
+                .swiper-slide {
+                  background-color: $white-bg;
+                  border-radius: 6px;
+                  display: flex;
+                  flex-direction: column;
+                  padding: 16px;
+                }
+              }
+            }
+            .prices__table {
+              display: block;
+              padding: 0;
+              line-height: 16px;
+              > thead {
+                display: none;
+              }
+              > tbody {
+                border-radius: 0;
+                background-color: $gray-bg;
+                display: flex;
+                > tr {
+                  position: relative;
+                  height: 200px;
+                  display: flex;
+                  &:not(:first-child)::after {
+                    display: none;
+                  }
+                  > td {
+                    padding: 0 !important;
+                    &:not(:last-child) {
+                      margin-bottom: 16px;
+                    }
+                    &:not(:last-child)::before {
+                      display: block;
+                      color: $support-text-color;
+                      margin-bottom: 4px;
+                    }
+                    &:first-child::before {
+                      content: "Ремонтные услуги";
+                    }
+                    &:nth-child(2):before {
+                      content: "Цена";
+                    }
+                    &:nth-child(3):before {
+                      content: "Срок";
+                    }
+                  }
+                  .btn__box {
+                    position: absolute;
+                    bottom: 16px;
+                    right: 16px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

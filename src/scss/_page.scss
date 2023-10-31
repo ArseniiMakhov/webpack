@@ -1,0 +1,15 @@
+.page {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    .page__menu {
+      .menu__content {
+        width: 320px;
+      }
+    }
+    .page__main {
+      width: calc(100% - 320px);
+      background: $gray-bg;
+    }
+  }

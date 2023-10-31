@@ -1,0 +1,72 @@
+a {
+    text-decoration: none;
+    color: $default-text-color;
+    transition: opacity .2s linear;
+    &:hover {
+      opacity: 0.5;
+      .btn:hover {
+        opacity: 1;
+      }
+    }
+    &[class$="--active"]:hover {
+      opacity: 1;
+      cursor: default;
+    }
+}
+
+.btn {
+    border: none;
+    color: $default-text-color;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0;
+    background-color: transparent;
+    height: 40px;
+    min-width: 40px;
+    transition: opacity .2s linear;
+    &:hover {
+      opacity: 0.7;
+    }
+}
+
+.table__btn {
+    border-radius: 16px;
+    background: $table-btn;
+    padding: 4px 8px 4px 12px;
+    font-family: "TT Lakes Bold";
+    font-size: 12px;
+    font-style: normal;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: -0.15px;
+    color: $white-bg;
+    display: flex;
+    margin: 0 0 0 auto;
+    height: 32px;
+    img {
+      margin-left: 8px;
+    }
+  }
+
+  .btn--close {
+    background: url(../img/btn--close.svg) center no-repeat;
+  }
+
+  .contacts__box {
+    display: flex;
+    margin-bottom: 16px;
+    .btn {
+      &:not(:last-child) {
+      margin-right: 16px;
+      }
+    }
+    .btn-tel {
+      background: url(../img/btn-tel.png) center no-repeat;
+    }
+    .btn-chat {
+      background: url(../img/btn-chat.png) center no-repeat;
+    }
+    .btn-profile {
+      background: url(../img/btn-profile.png) center no-repeat;
+    }
+  }

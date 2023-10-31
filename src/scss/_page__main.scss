@@ -26,6 +26,9 @@
       .header__logo {
         display: none;
       }
+      .btn--app, .btn--status {
+        border-radius: 0;
+      }
     }
     .main__main {
       .main__title {
@@ -41,7 +44,7 @@
         display: block;
         width: 3px;
         height: 40px;
-        background-color: #41F6D7;
+        background-color: $title-marker;
         border-radius: 3px;
         margin-left: -33px;
       }
@@ -58,7 +61,9 @@
         color: #7E7E82;
       }
       .navigation__link--active {
-        border: 2px solid #B8FFEC;
+        border: 2px solid $support-bg;
+        background-color: #fff;
+        border-radius: 6px;
       }
       .history {
         display: flex;
@@ -150,7 +155,7 @@
           border-collapse: collapse;
           padding: 0 23px;
           > thead {
-            color: #7e7e82;
+            color: $support-text-color;
             text-align: left;
             >tr {
                 >th {
@@ -160,7 +165,7 @@
             }
           }
           > tbody {
-            background: #FFF;
+            background: $white-bg;
             border-radius: 6px;
             display: table-row-group;
             > tr {
@@ -172,7 +177,7 @@
                 position: absolute;
                 left: 23px;
                 right: 23px;
-                background: #EAEAEA;
+                background: $table-lines;
                 }
               > td {
                 padding: 23px;

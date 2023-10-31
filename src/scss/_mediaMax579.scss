@@ -1,0 +1,63 @@
+@media screen and (max-width: 579px) {
+    .summary {
+      margin: 0;
+    }
+    .page__menu {
+      .menu__content {
+        padding: 24px;
+        .menu__navigation {
+          margin-top: 24px;
+          .navigation__link {
+            &:not(:last-child) {
+              > p {
+                margin-bottom: 24px;
+              }
+            }
+          }
+        }
+        .menu__contacts {
+          bottom: 64px;
+          .contacts__box {
+            margin-bottom: 10px;
+          }
+          .contacts__tel {
+            margin: 12px 0 8px 0;
+          }
+        }
+        .menu__languages {
+          bottom: 32px;
+        }
+      }
+    }
+    .page__main {
+      .main__main {
+        .history {
+          display: block;
+          padding: 24px 0;
+          .history__text {
+            padding: 0 24px;
+            margin-right: 0;
+          }
+          .history__img {
+            width: 100%;
+            border-radius: 0;
+          }
+        }
+      }
+      .main__footer {
+        display: block;
+        height: auto;
+        padding: 16px 4px;
+        text-align: center;
+        > div {
+          width: 100%;
+          &:not(:last-child) {
+            margin-bottom: 16px;
+          }
+        }
+        .footer__information {
+          text-align: center;
+        }
+      }
+    }
+  }
