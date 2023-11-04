@@ -1089,41 +1089,42 @@ a {
 @media screen and (max-width: 579px) {
   .summary {
     margin: 0; }
-  .page__menu .menu__content {
+  .page .page__menu .menu__content {
     padding: 24px; }
-    .page__menu .menu__content .menu__navigation {
+    .page .page__menu .menu__content .menu__navigation {
       margin-top: 24px; }
-      .page__menu .menu__content .menu__navigation .navigation__link:not(:last-child) > p {
+      .page .page__menu .menu__content .menu__navigation .navigation__link:not(:last-child) > p {
         margin-bottom: 24px; }
-    .page__menu .menu__content .menu__contacts {
+    .page .page__menu .menu__content .menu__contacts {
       bottom: 64px; }
-      .page__menu .menu__content .menu__contacts .contacts__box {
+      .page .page__menu .menu__content .menu__contacts .contacts__box {
         margin-bottom: 10px; }
-      .page__menu .menu__content .menu__contacts .contacts__tel {
+      .page .page__menu .menu__content .menu__contacts .contacts__tel {
         margin: 12px 0 8px 0; }
-    .page__menu .menu__content .menu__languages {
+    .page .page__menu .menu__content .menu__languages {
       bottom: 32px; }
-  .page__main .main__main .history {
+  .page .page__main .main__main .history {
     display: block;
     padding: 24px 0; }
-    .page__main .main__main .history .history__container {
+    .page .page__main .main__main .history .history__container {
       padding: 0 24px;
       margin-bottom: 20px; }
-      .page__main .main__main .history .history__container .history__text {
+      .page .page__main .main__main .history .history__container .history__text {
         margin-right: 0; }
-    .page__main .main__main .history .history__img {
+    .page .page__main .main__main .history .history__img {
       width: 100%;
       border-radius: 0; }
-  .page__main .main__footer {
+  .page .page__main .main__footer {
+    height: auto;
     display: block;
     height: auto;
     padding: 16px 4px;
     text-align: center; }
-    .page__main .main__footer > div {
+    .page .page__main .main__footer > div {
       width: 100%; }
-      .page__main .main__footer > div:not(:last-child) {
+      .page .page__main .main__footer > div:not(:last-child) {
         margin-bottom: 16px; }
-    .page__main .main__footer .footer__information {
+    .page .page__main .main__footer .footer__information {
       text-align: center; } }
 
 @media screen and (max-width: 540px) {
