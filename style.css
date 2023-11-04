@@ -417,7 +417,8 @@
   color: #7E7E82;
   font-size: 14px;
   line-height: 16px;
-  background-color: #F8F8F8; }
+  background-color: #F8F8F8;
+  opacity: 0.7218; }
   .main__footer > div {
     width: 33%; }
   .main__footer .footer__politics {
@@ -1172,25 +1173,25 @@ a {
       max-width: 300px; } }
 
 @media screen and (max-height: 750px) {
-  .page__menu .menu__content {
+  .page .page__menu .menu__content {
     padding: 24px; }
-    .page__menu .menu__content .menu__navigation {
+    .page .page__menu .menu__content .menu__navigation {
       margin-top: 24px; }
-      .page__menu .menu__content .menu__navigation .navigation__link:not(:last-child) > p {
+      .page .page__menu .menu__content .menu__navigation .navigation__link:not(:last-child) > p {
         margin-bottom: 24px; }
-    .page__menu .menu__content .menu__contacts {
+    .page .page__menu .menu__content .menu__contacts {
       bottom: 64px; }
-      .page__menu .menu__content .menu__contacts .contacts__box {
+      .page .page__menu .menu__content .menu__contacts .contacts__box {
         margin-bottom: 10px; }
-      .page__menu .menu__content .menu__contacts .contacts__tel {
+      .page .page__menu .menu__content .menu__contacts .contacts__tel {
         margin: 12px 0 8px 0; } }
 
 @media screen and (max-height: 660px) {
-  .page__menu .menu__content .menu__navigation {
+  .page .page__menu .menu__content .menu__navigation {
     margin-top: 14px; }
-    .page__menu .menu__content .menu__navigation .navigation__link:not(:last-child) > p {
+    .page .page__menu .menu__content .menu__navigation .navigation__link:not(:last-child) > p {
       margin-bottom: 14px; }
-  .page__menu .menu__content .menu__contacts {
+  .page .page__menu .menu__content .menu__contacts {
     bottom: 55px; }
   .modal .modal__form .modal__title {
     margin: 85px 0 20px 0; } }
