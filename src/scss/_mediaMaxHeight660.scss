@@ -1,18 +1,20 @@
 @media screen and (max-height: 660px) {
-    .page__menu {
-        .menu__content {
-            .menu__navigation {
-                margin-top: 14px;
-                .navigation__link:not(:last-child) {
-                    > p {
-                        margin-bottom: 14px;
+    .page {
+        .page__menu {
+            .menu__content {
+                .menu__navigation {
+                    margin-top: 14px;
+                    .navigation__link:not(:last-child) {
+                        > p {
+                            margin-bottom: 14px;
+                        }
                     }
                 }
-            }
-            .menu__contacts {
-                bottom: 55px;
-            }
-        }    
+                .menu__contacts {
+                    bottom: 55px;
+                }
+            }    
+        }        
     }
     .modal {
         .modal__form {
