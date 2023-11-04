@@ -29,6 +29,31 @@ a {
     }
 }
 
+.btn__show {
+  display: flex;
+  align-items: center;
+  font-family: 'TT Lakes Medium';
+  line-height: 24px;
+  height: 24px;
+  letter-spacing: -0.2px;
+  border-radius: 0;
+  margin-top: 14px;
+  &::before {
+    content: '';
+    display: block;
+    background: url(../img/subtext__title-marker.svg) center no-repeat;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+}
+
+.btn__show--active {
+  &::before {
+    transform: rotate(180deg);
+  }
+}
+
 .table__btn {
     border-radius: 16px;
     background: $table-btn;

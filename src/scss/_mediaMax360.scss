@@ -36,6 +36,11 @@
           .history {
             .history__text {
               padding: 0 16px;
+              height: 90px;
+              line-height: 18px;
+            }
+            .history__text--active {
+              height: auto;
             }
           }
           .prices {

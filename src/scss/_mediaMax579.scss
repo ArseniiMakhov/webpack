@@ -34,9 +34,12 @@
         .history {
           display: block;
           padding: 24px 0;
-          .history__text {
+          .history__container {
             padding: 0 24px;
-            margin-right: 0;
+            margin-bottom: 20px;
+            .history__text {
+              margin-right: 0;
+            }
           }
           .history__img {
             width: 100%;

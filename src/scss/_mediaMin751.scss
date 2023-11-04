@@ -1,0 +1,9 @@
+@media screen and (min-width: 751px) {
+    .swiper-slide {
+      width: 100% !important;
+      max-width: 240px !important;
+    }
+    .section__box {
+      transform: translate3d(0, 0, 0) !important;
+    }
+  }

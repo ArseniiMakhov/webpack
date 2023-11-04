@@ -67,28 +67,21 @@
       }
       .history {
         display: flex;
-        padding: 0 28.65px 40px 34px;
+        padding: 0 32px 40px 32px;
         .history__text {
           font-family: "TT Lakes Regular";
           line-height: 20px;
           margin-right: 36px;
           font-size: 14px;
           font-weight: 400;
-          > p {
-            margin-bottom: 14px;
+          height: 160px;
+          overflow: hidden;
+          > p:not(:last-child) {
+            margin-bottom: 20px;
           } 
-          .history__subtext {
-            > p {
-              margin-bottom: 14px;
-            }
-            .subtext__title {
-              padding-left: 32px;
-              margin-bottom: 14px;
-              &::before {
-                margin-left: -32px;
-              }
-            }
-          }
+        }
+        .history__text--active {
+          height: auto;
         }
         .history__img {
           border-radius: 8px;
@@ -100,26 +93,25 @@
     }
     .brands {
       .brands__navigation {
-        row-gap: 16px;
         grid-template-rows: repeat(2, 1fr);
         .section__item {
+          margin-bottom: 16px;
           height: 72px;
           align-items: center;
         }
       }
-      .brands__subbrands {
-        .subbrands__title {
-          padding-left: 64px;
-          &:before {
-            margin-left: -32px;
-          }
-        }
+      .brands__navigation--active {
+        grid-auto-rows: max-content;
+      }
+      .brands__btn {
+        margin-left: 32px;
       }
     }
     .gadgets {
       .gadgets__navigation {
         grid-template-rows: repeat(1, 1fr);
         .section__item {
+          margin-bottom: 16px;
           height: 160px;
           flex-direction: column;
           .item__text {
@@ -131,13 +123,11 @@
           }
         }
       }
-      .gadgets__subgadgets {
-        .subgadgets__title {
-          padding-left: 64px;
-          &:before {
-            margin-left: -32px;
-          }
-        }
+      .gadgets__navigation--active {
+        grid-auto-rows: max-content;
+      }
+      .gadgets__btn {
+        margin-left: 32px;
       }
     }
     .prices {

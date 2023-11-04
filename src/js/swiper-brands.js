@@ -17,7 +17,7 @@ export default new Swiper('.brands', {
         clickable: true,
     },
     breakpoints: {
-        722: {
+        751: {
             spaceBetween: null,
         },
     },

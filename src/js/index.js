@@ -8,5 +8,8 @@ import './menuCloser'
 import './swiper-brands'
 import './swiper-gadgets'
 import './swiper-table'
+import './historyBtn'
+import './brandsBtn'
+import './gadgetsBtn'
 import '../scss/style.scss'
 
