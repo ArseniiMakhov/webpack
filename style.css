@@ -419,7 +419,7 @@
   line-height: 16px;
   background-color: #F8F8F8; }
   .main__footer > div {
-    width: 30%; }
+    width: 33%; }
   .main__footer .footer__politics {
     text-align: center; }
   .main__footer .footer__information {
@@ -467,7 +467,7 @@
         height: 40px;
         background-color: #41F6D7;
         border-radius: 3px;
-        margin-left: -33px;
+        margin-left: -32px;
         bottom: -4px; }
     .modal .modal__form .modal__input {
       width: 100%;
@@ -618,40 +618,39 @@
     border-radius: 6px; }
   .page__main .main__main .history {
     display: flex;
-    padding: 0 28.65px 40px 34px; }
+    padding: 0 32px 40px 32px; }
     .page__main .main__main .history .history__text {
       font-family: "TT Lakes Regular";
       line-height: 20px;
       margin-right: 36px;
       font-size: 14px;
-      font-weight: 400; }
-      .page__main .main__main .history .history__text > p {
-        margin-bottom: 14px; }
-      .page__main .main__main .history .history__text .history__subtext > p {
-        margin-bottom: 14px; }
-      .page__main .main__main .history .history__text .history__subtext .subtext__title {
-        padding-left: 32px;
-        margin-bottom: 14px; }
-        .page__main .main__main .history .history__text .history__subtext .subtext__title::before {
-          margin-left: -32px; }
+      font-weight: 400;
+      height: 160px;
+      overflow: hidden; }
+      .page__main .main__main .history .history__text > p:not(:last-child) {
+        margin-bottom: 20px; }
+    .page__main .main__main .history .history__text--active {
+      height: auto; }
     .page__main .main__main .history .history__img {
       border-radius: 8px;
       width: 50%;
       aspect-ratio: 16 / 9;
       align-self: flex-start; }
   .page__main .brands .brands__navigation {
-    row-gap: 16px;
     grid-template-rows: repeat(2, 1fr); }
     .page__main .brands .brands__navigation .section__item {
+      margin-bottom: 16px;
       height: 72px;
       align-items: center; }
-  .page__main .brands .brands__subbrands .subbrands__title {
-    padding-left: 64px; }
-    .page__main .brands .brands__subbrands .subbrands__title:before {
-      margin-left: -32px; }
+  .page__main .brands .brands__navigation--active {
+    grid-auto-rows: -webkit-max-content;
+    grid-auto-rows: max-content; }
+  .page__main .brands .brands__btn {
+    margin-left: 32px; }
   .page__main .gadgets .gadgets__navigation {
     grid-template-rows: repeat(1, 1fr); }
     .page__main .gadgets .gadgets__navigation .section__item {
+      margin-bottom: 16px;
       height: 160px;
       flex-direction: column; }
       .page__main .gadgets .gadgets__navigation .section__item .item__text {
@@ -659,10 +658,11 @@
         align-self: flex-start; }
       .page__main .gadgets .gadgets__navigation .section__item .item__btn {
         align-self: flex-end; }
-  .page__main .gadgets .gadgets__subgadgets .subgadgets__title {
-    padding-left: 64px; }
-    .page__main .gadgets .gadgets__subgadgets .subgadgets__title:before {
-      margin-left: -32px; }
+  .page__main .gadgets .gadgets__navigation--active {
+    grid-auto-rows: -webkit-max-content;
+    grid-auto-rows: max-content; }
+  .page__main .gadgets .gadgets__btn {
+    margin-left: 32px; }
   .page__main .prices {
     padding-bottom: 50px; }
     .page__main .prices .prices__container {
@@ -754,6 +754,26 @@ a {
   .btn:hover {
     opacity: 0.7; }
 
+.btn__show {
+  display: flex;
+  align-items: center;
+  font-family: 'TT Lakes Medium';
+  line-height: 24px;
+  height: 24px;
+  letter-spacing: -0.2px;
+  border-radius: 0;
+  margin-top: 14px; }
+  .btn__show::before {
+    content: '';
+    display: block;
+    background: url(./static/subtext__title-marker.svg) center no-repeat;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px; }
+
+.btn__show--active::before {
+  transform: rotate(180deg); }
+
 .table__btn {
   border-radius: 16px;
   background: #FF3E79;
@@ -838,32 +858,6 @@ a {
   margin: 0 5px;
   background-color: #DDD; }
 
-.details[open] .summary > span {
-  display: none; }
-
-.details[open] .summary::after {
-  content: "Скрыть"; }
-
-.details[open] .summary::before {
-  transform: rotate(180deg); }
-
-.details .summary {
-  margin-top: 24px;
-  display: inline;
-  cursor: pointer;
-  font-family: "TT Lakes Medium";
-  font-size: 16px;
-  line-height: 24px; }
-  .details .summary::marker {
-    display: none; }
-  .details .summary::before {
-    position: absolute;
-    content: "";
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background: url(./static/subtext__title-marker.svg) center no-repeat; }
-
 @media screen and (max-width: 1365px) {
   .page .page__menu {
     width: 100%;
@@ -941,28 +935,28 @@ a {
 @media screen and (max-width: 1000px) {
   .section .section__box {
     grid-template-columns: repeat(3, 1fr); }
-  .page__main .brands .brands__subbrands .subbrands__title {
+  .page .page__main .main__main .brands .brands__subbrands .subbrands__title {
     margin-top: 8px; }
-  .page__main .prices .prices__container .prices__table > thead > tr > th {
+  .page .page__main .main__main .prices .prices__container .prices__table > thead > tr > th {
     padding: 23px 16px; }
-    .page__main .prices .prices__container .prices__table > thead > tr > th:first-child {
+    .page .page__main .main__main .prices .prices__container .prices__table > thead > tr > th:first-child {
       padding: 23px 0 23px 16px; }
-    .page__main .prices .prices__container .prices__table > thead > tr > th:not(:first-child) {
+    .page .page__main .main__main .prices .prices__container .prices__table > thead > tr > th:not(:first-child) {
       padding: 23px 5px; }
-    .page__main .prices .prices__container .prices__table > thead > tr > th:last-child {
+    .page .page__main .main__main .prices .prices__container .prices__table > thead > tr > th:last-child {
       padding: 23px 16px 23px 0; }
-  .page__main .prices .prices__container .prices__table > tbody > tr:not(:first-child)::after {
+  .page .page__main .main__main .prices .prices__container .prices__table > tbody > tr:not(:first-child)::after {
     left: 16px;
     right: 16px; }
-  .page__main .prices .prices__container .prices__table > tbody > tr > td {
+  .page .page__main .main__main .prices .prices__container .prices__table > tbody > tr > td {
     padding: 23px 16px; }
-    .page__main .prices .prices__container .prices__table > tbody > tr > td:first-child {
+    .page .page__main .main__main .prices .prices__container .prices__table > tbody > tr > td:first-child {
       padding: 23px 0 23px 16px; }
-    .page__main .prices .prices__container .prices__table > tbody > tr > td:not(:first-child) {
+    .page .page__main .main__main .prices .prices__container .prices__table > tbody > tr > td:not(:first-child) {
       padding: 23px 5px; }
-    .page__main .prices .prices__container .prices__table > tbody > tr > td:last-child {
+    .page .page__main .main__main .prices .prices__container .prices__table > tbody > tr > td:last-child {
       padding: 23px 16px 23px 0; }
-  .page__main .main__footer {
+  .page .page__main .main__footer {
     height: 105px; } }
 
 @media screen and (max-width: 768px) {
@@ -1014,13 +1008,15 @@ a {
   .page__main .main__footer {
     padding: 32px 24px; } }
 
-@media screen and (min-width: 722px) {
+@media screen and (min-width: 751px) {
   .swiper-slide {
     width: 100% !important;
-    max-width: 240px !important; } }
+    max-width: 240px !important; }
+  .section__box {
+    transform: translate3d(0, 0, 0) !important; } }
 
-@media screen and (max-width: 721px) {
-  .details:not(.history__subtext) {
+@media screen and (max-width: 750px) {
+  .btn__show:not(.history__btn) {
     display: none; }
   .section .section__box {
     -moz-column-gap: 0;
@@ -1110,9 +1106,11 @@ a {
   .page__main .main__main .history {
     display: block;
     padding: 24px 0; }
-    .page__main .main__main .history .history__text {
+    .page__main .main__main .history .history__container {
       padding: 0 24px;
-      margin-right: 0; }
+      margin-bottom: 20px; }
+      .page__main .main__main .history .history__container .history__text {
+        margin-right: 0; }
     .page__main .main__main .history .history__img {
       width: 100%;
       border-radius: 0; }
@@ -1157,7 +1155,11 @@ a {
     .page .page__main .main__main .main__title::before {
       margin-left: -16px; }
   .page .page__main .main__main .history .history__text {
-    padding: 0 16px; }
+    padding: 0 16px;
+    height: 90px;
+    line-height: 18px; }
+  .page .page__main .main__main .history .history__text--active {
+    height: auto; }
   .page .page__main .main__main .prices {
     padding-bottom: 40px; }
     .page .page__main .main__main .prices .prices__addition {
@@ -1167,6 +1169,30 @@ a {
       display: block;
       width: 100%;
       max-width: 300px; } }
+
+@media screen and (max-height: 750px) {
+  .page__menu .menu__content {
+    padding: 24px; }
+    .page__menu .menu__content .menu__navigation {
+      margin-top: 24px; }
+      .page__menu .menu__content .menu__navigation .navigation__link:not(:last-child) > p {
+        margin-bottom: 24px; }
+    .page__menu .menu__content .menu__contacts {
+      bottom: 64px; }
+      .page__menu .menu__content .menu__contacts .contacts__box {
+        margin-bottom: 10px; }
+      .page__menu .menu__content .menu__contacts .contacts__tel {
+        margin: 12px 0 8px 0; } }
+
+@media screen and (max-height: 660px) {
+  .page__menu .menu__content .menu__navigation {
+    margin-top: 14px; }
+    .page__menu .menu__content .menu__navigation .navigation__link:not(:last-child) > p {
+      margin-bottom: 14px; }
+  .page__menu .menu__content .menu__contacts {
+    bottom: 55px; }
+  .modal .modal__form .modal__title {
+    margin: 85px 0 20px 0; } }
 
 * {
   box-sizing: border-box;
